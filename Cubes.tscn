@@ -1,0 +1,59 @@
+[gd_scene load_steps=13 format=3 uid="uid://c2mqqb60wncpc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i4k80"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0k8jb"]
+material = SubResource("StandardMaterial3D_i4k80")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o8sfi"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xhulh"]
+material = SubResource("StandardMaterial3D_o8sfi")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xnujo"]
+albedo_color = Color(0, 0.581362, 0.968672, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fs62u"]
+material = SubResource("StandardMaterial3D_xnujo")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_frg7u"]
+albedo_color = Color(0.8923169, 0.19743255, 0.1669775, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pjfj3"]
+material = SubResource("StandardMaterial3D_frg7u")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0k8jb"]
+albedo_color = Color(0.44364515, 0.00015502915, 0.4509458, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_o8sfi"]
+material = SubResource("StandardMaterial3D_0k8jb")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xhulh"]
+albedo_color = Color(0, 0.59420246, 0.4579109, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xnujo"]
+material = SubResource("StandardMaterial3D_xhulh")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Entrance" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_0k8jb")
+
+[node name="Exit" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_xhulh")
+
+[node name="Room" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_fs62u")
+
+[node name="Corridor" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_pjfj3")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.7616858)
+
+[node name="Room2" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_o8sfi")
+
+[node name="Room3" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_xnujo")

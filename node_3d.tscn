@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://45pyhqfmhaxb"]
+
+[ext_resource type="Script" uid="uid://35eu3v4o68tu" path="res://node_3d.gd" id="1_noarx"]
+[ext_resource type="MeshLibrary" uid="uid://bjjrugq8o34ow" path="res://Cubes.tres" id="2_a0tk4"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_noarx"]
+
+[sub_resource type="Sky" id="Sky_a0tk4"]
+sky_material = SubResource("ProceduralSkyMaterial_noarx")
+
+[sub_resource type="Environment" id="Environment_r3fl7"]
+background_mode = 2
+sky = SubResource("Sky_a0tk4")
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_noarx")
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("2_a0tk4")
+cell_size = Vector3(2, 2, 1)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_r3fl7")
