@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c2mqqb60wncpc"]
+[gd_scene load_steps=15 format=3 uid="uid://c2mqqb60wncpc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i4k80"]
 
@@ -18,22 +18,28 @@ albedo_color = Color(0, 0.581362, 0.968672, 1)
 material = SubResource("StandardMaterial3D_xnujo")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_frg7u"]
-albedo_color = Color(0.8923169, 0.19743255, 0.1669775, 1)
+albedo_color = Color(0.892317, 0.197433, 0.166977, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_pjfj3"]
 material = SubResource("StandardMaterial3D_frg7u")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0k8jb"]
-albedo_color = Color(0.44364515, 0.00015502915, 0.4509458, 1)
+albedo_color = Color(0.443645, 0.000155029, 0.450946, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_o8sfi"]
 material = SubResource("StandardMaterial3D_0k8jb")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xhulh"]
-albedo_color = Color(0, 0.59420246, 0.4579109, 1)
+albedo_color = Color(0, 0.594202, 0.457911, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_xnujo"]
 material = SubResource("StandardMaterial3D_xhulh")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fs62u"]
+albedo_color = Color(0.370077, 0.817444, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_frg7u"]
+material = SubResource("StandardMaterial3D_fs62u")
 
 [node name="Node3D" type="Node3D"]
 
@@ -43,17 +49,24 @@ mesh = SubResource("BoxMesh_0k8jb")
 [node name="Exit" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_xhulh")
 
-[node name="Room" type="MeshInstance3D" parent="."]
+[node name="Corridor" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_fs62u")
 
-[node name="Corridor" type="MeshInstance3D" parent="."]
+[node name="Room" type="MeshInstance3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 mesh = SubResource("BoxMesh_pjfj3")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.7616858)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.76169)
 
 [node name="Room2" type="MeshInstance3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 mesh = SubResource("BoxMesh_o8sfi")
 
 [node name="Room3" type="MeshInstance3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 mesh = SubResource("BoxMesh_xnujo")
+
+[node name="Room4" type="MeshInstance3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+mesh = SubResource("BoxMesh_frg7u")
