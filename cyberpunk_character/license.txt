@@ -1,0 +1,11 @@
+Model Information:
+* title:	CyberPunk Character
+* source:	https://sketchfab.com/3d-models/cyberpunk-character-bd161bb708a941f0b436c2e95eafc755
+* author:	AlekseiPresnaykov (https://sketchfab.com/AlekseiPresnaykov)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "CyberPunk Character" (https://sketchfab.com/3d-models/cyberpunk-character-bd161bb708a941f0b436c2e95eafc755) by AlekseiPresnaykov (https://sketchfab.com/AlekseiPresnaykov) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

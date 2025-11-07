@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcenx2h6ldby0"]
+
+[ext_resource type="Script" uid="uid://buv3a30j5a3cs" path="res://room_test.gd" id="1_jm6y3"]
+[ext_resource type="PackedScene" uid="uid://d21iv8b5mqena" path="res://sketchfab_scene.tscn" id="2_yq7rk"]
+
+[node name="RoomTest" type="Node3D"]
+script = ExtResource("1_jm6y3")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("2_yq7rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+omni_range = 360.376

@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://bkteuxgg6q4fm"]
+
+[ext_resource type="Script" uid="uid://c46s4rhkk7ut8" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="Shader" uid="uid://cph2sdt6crx0f" path="res://player.gdshader" id="2_onrkg"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_i3pqv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_onrkg"]
+render_priority = 0
+shader = ExtResource("2_onrkg")
+shader_parameter/edge_threshold = 0.5
+shader_parameter/line_color = Color(0, 0, 0, 1)
+shader_parameter/background_color = Color(1, 1, 1, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_hqtel"]
+material = SubResource("ShaderMaterial_onrkg")
+flip_faces = true
+size = Vector2(2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_onrkg"]
+
+[node name="Player" type="CharacterBody3D"]
+axis_lock_linear_y = true
+motion_mode = 1
+script = ExtResource("1_4flbx")
+
+[node name="RotationPivot" type="Node3D" parent="."]
+
+[node name="PlayerMeshInstance" type="MeshInstance3D" parent="RotationPivot"]
+mesh = SubResource("BoxMesh_i3pqv")
+skeleton = NodePath("../..")
+
+[node name="PlayerCamera" type="Camera3D" parent="RotationPivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.49853)
+current = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RotationPivot/PlayerCamera"]
+transform = Transform3D(-0.994151, 0, -0.107999, 0, 1, 0, 0.107999, 0, -0.994151, 0, 0, -0.905552)
+transparency = 0.76
+extra_cull_margin = 16384.0
+mesh = SubResource("QuadMesh_hqtel")
+skeleton = NodePath("../../..")
+
+[node name="PlayerCollisionShape" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_onrkg")
